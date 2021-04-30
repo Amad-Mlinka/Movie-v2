@@ -62,9 +62,9 @@ export const DetailPage = () => {
 
     useEffect(() => {
 
-        getMedia(params.media, params.id)
-        getTrailer(params.media, params.id)
-        getSimilar(params.media, params.id)
+        getMedia(params.media,params.id)
+        getTrailer(params.media,params.id)
+        getSimilar(params.media,params.id)
         window.scrollTo(0, 0);// eslint-disable-next-line react-hooks/exhaustive-deps
     }, [state])
 
@@ -109,7 +109,7 @@ export const DetailPage = () => {
 
                                                     </div>
                                                     <div className="overview">
-                                                        <h2>Plot summary: </h2>
+                                                        <h2>Plot summary</h2>
                                                         <h3>
                                                             {movie.overview}
                                                         </h3>
@@ -117,7 +117,7 @@ export const DetailPage = () => {
 
                                                 </div>
                                                 <div className="similar">
-                                                    <h1 className="similar-title">Similar {params.media === "tv" ? "TV Shows" : "Movies"}</h1>
+                                                    <h1 className="similar-title">Simillar {params.media === "tv" ? "TV Shows" : "Movies"}</h1>
 
                                                     <div className="similar-container">
                                                         {similar.map((sim: (tvInterface | movieInterface)) =>
@@ -171,24 +171,17 @@ export const DetailPage = () => {
 
                                                     <div className="media-info-item rating">
                                                         <h2>
-                                                            <div className="title">
-                                                                Public rating:
-                                                            </div>
-                                                            {tv.vote_average}/10
-                                                        </h2>
+                                                            Public rating: {tv.vote_average}/10
+                                                    </h2>
                                                     </div>
 
                                                     <div className="media-info-item seasons">
                                                         <h2>
-                                                            <div className="title">
-                                                                No. of seasons:
-                                                            </div>
-                                                            {tv.seasons.length} {tv.seasons.length > 1 ? "seasons" : "season"}
+                                                            No. of seasons: {tv.seasons.length} {tv.seasons.length > 1 ? "seasons" : "season"}
                                                         </h2>
 
                                                     </div>
                                                     <div className="overview">
-                                                        <h2 className="title">Plot summary: </h2>
                                                         <h3>
                                                             {tv.overview}
                                                         </h3>
@@ -196,11 +189,11 @@ export const DetailPage = () => {
 
                                                 </div>
                                                 <div className="similar">
-                                                    <h1 className="similar-title">Similar {params.media === "tv" ? "TV Shows" : "Movies"}</h1>
+                                                    <h1 className="similar-title">Simillar {params.media === "tv" ? "TV Shows" : "Movies"}</h1>
                                                     <div className="similar-container">
                                                         {similar.map((sim: (tvInterface | movieInterface)) =>
                                                         (
-                                                            <Link to={{ pathname: `/${params.media}/${sim.id}` }} key={sim.id} onClick={() => {
+                                                            <Link to={{ pathname: `/${params.media}/${sim.id}` }} key={sim.id}onClick={() => {
 
                                                                 dispatch({ type: "CHANGE_DETAIL", payload: sim })
                                                                 console.log(state)

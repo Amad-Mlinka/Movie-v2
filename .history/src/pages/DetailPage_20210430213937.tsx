@@ -188,7 +188,7 @@ export const DetailPage = () => {
 
                                                     </div>
                                                     <div className="overview">
-                                                        <h2 className="title">Plot summary: </h2>
+                                                        <h2>Plot summary: </h2>
                                                         <h3>
                                                             {tv.overview}
                                                         </h3>

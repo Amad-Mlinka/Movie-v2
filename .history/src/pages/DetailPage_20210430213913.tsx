@@ -180,15 +180,12 @@ export const DetailPage = () => {
 
                                                     <div className="media-info-item seasons">
                                                         <h2>
-                                                            <div className="title">
-                                                                No. of seasons:
-                                                            </div>
-                                                            {tv.seasons.length} {tv.seasons.length > 1 ? "seasons" : "season"}
+                                                            No. of seasons: {tv.seasons.length} {tv.seasons.length > 1 ? "seasons" : "season"}
                                                         </h2>
 
                                                     </div>
                                                     <div className="overview">
-                                                        <h2 className="title">Plot summary: </h2>
+                                                        <h2>Plot summary: </h2>
                                                         <h3>
                                                             {tv.overview}
                                                         </h3>

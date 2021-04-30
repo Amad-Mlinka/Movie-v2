@@ -78,11 +78,6 @@
   }
   
 }
- .overview,.seasons,.rating{
-   .title{
-     color: $secondary-bright;
-   }
- }
 
 @include breakpoint(max-laptop){
   h3{
