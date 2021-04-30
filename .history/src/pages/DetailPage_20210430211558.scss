@@ -77,6 +77,8 @@
 }
 
 @include breakpoint(max-laptop){
+  .movie-details-container{
+  }
   .main-details{
     flex-direction: column;
   }
@@ -113,7 +115,7 @@
   }
   .poster-info{
     .media-poster{
-      width: 30rem;
+      width: 25%;
       margin-bottom: 10px;
       img{
         width: 100%;

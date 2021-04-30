@@ -31,7 +31,7 @@ export const Movie = (media: movieInterface) => {
     }
 
     return (
-        <Link to={`/movie/${media.id}`} onClick={onClick} className="media-link">
+        <Link to={`/movie/${media.id}`} onClick={onClick}>
 
             <div className="media" key={media.id}>
                 <div className="media-container-preview">
