@@ -1,0 +1,53 @@
+@import "../main.scss";
+.details{    
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+}
+.movie-details-container{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+    
+}
+
+.backdrop{
+  backdrop-filter: blur(25px) contrast(0.6);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.main-details{
+  display: flex;
+  margin-top: 150px;
+}
+.poster-info{
+  display: flex;
+}
+.title{
+  text-align: center;
+}
+@include breakpoint(max-mobile){
+  .main-details{
+    flex-direction: column;
+  }
+  .poster-info{
+    flex-direction: column;
+    align-items: center;
+  }
+  .media-poster{
+    width: 50%;
+    img{
+      width: 100%;
+    }
+  }
+  .media-info{
+    text-align: center;
+  }  
+}
+@include breakpoint(min-tablet){
+  .movie-details-container{
+    
+  }
+}
